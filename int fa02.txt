@@ -1,0 +1,33 @@
+int fa0/2
+switchport mode access
+switchport access vlan 20
+int fa0/3
+switchport mode access
+switchport access vlan 20
+int fa0/4
+switchport mode access
+switchport access vlan 20
+int fa0/12
+switchport mode access
+switchport access vlan 21
+int fa0/13
+switchport mode access
+switchport access vlan 21
+int fa0/14
+switchport mode access
+switchport access vlan 21
+
+int fa0/10
+switchport mode trunk
+int fa0/20
+switchport mode trunk
+
+
+Router
+interface FastEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.4 255.255.255.0
+!
+interface FastEthernet0/0.21
+ encapsulation dot1Q 21
+ ip address 192.168.21.4 255.255.255.0
